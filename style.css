@@ -1,0 +1,135 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100%;
+  width: 100%;
+}
+.container {
+
+ max-width: 70vw;
+ padding: 2rem 1rem;
+ margin: 0 auto;
+
+}
+
+.headertitle{
+  margin-top: 0.2rem;
+  text-align: center;
+}
+.headerdata{
+  margin-bottom: 2rem;
+  text-align: center  ;
+  color: rgb(83, 79, 79);
+}
+
+.maincontainer{
+  display: grid;
+  gap:1.2rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width:650px){
+  .maincontainer{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media (min-width:1320px){
+  .maincontainer{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+@media (min-width:1500px){
+  .maincontainer{
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+.cardcontainer{
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(237, 230, 230);
+  border-radius: 5px;
+}
+.imgcontainer{
+  position: relative;
+  overflow: hidden;
+  height: 7rem;
+}
+@media (min-width:800px){
+  .imgcontainer{
+    height: 12rem;
+  }
+}
+.cardimage{
+  object-fit: fill;
+  object-position: center;
+  position:absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.cardtitlecontainer{
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+
+   }
+.cardcontainer:hover .cardimage{
+  
+  transform: scale(1.1);
+  transition-duration: 200ms;
+}
+.cardtitle{
+  font-size: 1.2rem;
+  color: rgb(118, 107, 107);
+  margin-bottom: 0.2rem;
+}
+.cardtitle:hover{
+  color: rgb(39, 39, 135);
+}
+.carddec{
+  font-size: 1rem;
+}
+.cardfootercontainer{
+  display: flex;
+  justify-content: space-between;
+}
+.authorcontainer{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.authoravtarcontainer{
+ 
+  overflow: hidden;
+ 
+  
+}
+.authoravtar{
+  height: 2.5rem;
+  width: 2.5rem;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid rgb(168, 159, 159);
+
+}
+.authoerinof{
+  display: flex;
+  flex-direction: column;
+  color: rgb(130, 130, 213);
+  font-size: 0.8rem;
+}
+.cardtagcontainer {
+  border: 1px solid rgb(164, 158, 158);
+  font-size: 0.9rem;
+  line-height:1rem;
+  padding:3px;
+  color: rgb(142, 137, 137);
+  margin:4px;
+  border-radius: 10px;
+  text-align: center;
+ 
+}
